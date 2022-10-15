@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser")
 
 
 const app = express();
@@ -15,8 +16,10 @@ db.sequelize.sync( {force: true})
     console.log("gagal" + err.message);
 })
 var corsOptions = {
-    origin:"http://localhost:3000"
+    origin:["http://localhost:3000"],
+    credentials: true
 };
+app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));

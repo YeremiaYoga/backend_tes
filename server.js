@@ -31,6 +31,7 @@ app.get("/",(req,res)=> {
 require("./routes/route")(app);
 require("./routes/authRoute")(app);
 
+
 const port = process.env.port || 4000;
 app.listen(port, () => {
     console.log("Server running...")

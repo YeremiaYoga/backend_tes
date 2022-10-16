@@ -16,7 +16,6 @@ checkEmail = (req, res,next) => {
     })
     next();
 }
-
 const verifyRegister = {
     checkEmail: checkEmail
 };

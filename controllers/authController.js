@@ -25,7 +25,7 @@ exports.Register = async (req, res) => {
       gender: gender,
       password: hashPassword,
     });
-    res.json({ msg: "Berhasil" });
+    res.json({ msg: "Berhasil registrasi" });
   } catch (error) {
     console.log(error);
   }
@@ -68,7 +68,7 @@ exports.Login = async (req, res) => {
       userId,
     });
   } catch (error) {
-    res.status(404).json({ msg: "Email tidak ada" });
+    res.status(404).json({ msg: "Akun tidak ada" });
   }
 };
 
@@ -132,7 +132,7 @@ exports.getUserId = (req, res) => {
         res.send(data);
       } else {
         res.status(404).send({
-          msg: "Tidak ada produk",
+          msg: "Tidak ada user",
         });
       }
     })

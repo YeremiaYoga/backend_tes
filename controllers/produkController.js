@@ -67,11 +67,11 @@ exports.update = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          msg: "Update berhasil",
+          msg: "Update produk berhasil",
         });
       } else {
         res.send({
-          msg: "tidak bisa update",
+          msg: "tidak bisa update produk",
         });
       }
     })
@@ -90,11 +90,11 @@ exports.delete = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.send({
-          msg: "Delete berhasil",
+          msg: "Delete produk berhasil",
         });
       } else {
         res.send({
-          msg: "tidak bisa delete",
+          msg: "tidak bisa delete produk",
         });
       }
     })
